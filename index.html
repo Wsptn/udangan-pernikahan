@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Wedding of Babun & Septiana</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&family=Playfair+Display:ital,wght@0,400;0,600;1,400&family=Great+Vibes&family=Amiri&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div id="cover">
+        <div class="cover-content">
+            <p class="top-tag">The Wedding of</p>
+            <h1 class="title-font">Babun & Septiana</h1>
+            <p class="date-tag">11 . 11 . 2026</p>
+            
+            <div class="guest-box">
+                <p>Kepada Yth. Bapak/Ibu/Saudara/i:</p>
+                <h2 id="guest-name" class="guest-name-display">Tamu Undangan</h2>
+                
+                <div id="input-name-wrapper">
+                    <input type="text" id="guest-input" placeholder="Masukkan Nama Anda">
+                    <button onclick="simpanNama()" class="btn-input">OK</button>
+                </div>
+            </div>
+            
+            <button id="btn-open" class="btn-open" onclick="openInvitation()" style="display: none;">
+                <i class="fas fa-envelope-open-text"></i> Buka Undangan
+            </button>
+        </div>
+    </div>
+
+    <main id="main-content">
+        
+        <section class="section container">
+            <p class="arabic">بِسْمِ اللَّهِ الرَّحْمَنِ الرَّحِيم</p>
+            <p class="greeting">Assalamualaikum Warahmatullahi Wabarakatuh</p>
+            <p>Dengan memohon rahmat dan ridho Allah SWT, kami bermaksud menyelenggarakan pernikahan putra-putri kami:</p>
+        </section>
+
+        <section class="section container">
+            <div class="couple-grid">
+                <div class="couple-card">
+                    <div class="img-frame">
+                        <img src="assets/img/pria.jpg" alt="Pria" onerror="this.src='https://placehold.co/200'">
+                    </div>
+                    <h3 class="title-font">Muhammad Babun Waseptian, S.Kom</h3>
+                    <p>Putra Pertama dari<br>Bpk. Masnuri & Ibu Siti Fatimah</p>
+                </div>
+                
+                <div class="dan-symbol">&</div>
+
+                <div class="couple-card">
+                    <div class="img-frame">
+                        <img src="assets/img/wanita.jpg" alt="Wanita" onerror="this.src='https://placehold.co/200'">
+                    </div>
+                    <h3 class="title-font">Septiana Kamelia, S.Pd</h3>
+                    <p>Putri Kedua dari<br>Bpk. Romeo & Ibu Juliet</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="section container">
+            <div class="verse-box">
+                <p class="arabic-verse" dir="rtl">
+                    وَمِنْ ءَايَٰتِهِۦٓ أَنْ خَلَقَ لَكُم مِّنْ أَنفُسِكُمْ أَزْوَٰجًا لِّتَسْكُنُوٓا۟ إِلَيْهَا وَجَعَلَ بَيْنَكُم مَّوَدَّةً وَرَحْمَةً
+                </p>
+                <p class="translation">
+                    "Dan di antara tanda-tanda kekuasaan-Nya ialah Dia menciptakan untukmu isteri-isteri dari jenismu sendiri, supaya kamu cenderung dan merasa tenteram kepadanya."
+                </p>
+                <p class="surah-name">(QS. Ar-Rum: 21)</p>
+            </div>
+        </section>
+
+        <section class="section container">
+            <h2 class="title-font gold-text">Save The Date</h2>
+            <p>Insya Allah acara akan dilaksanakan pada:</p>
+            
+            <div class="save-date-box">
+                <div class="date-header">NOVEMBER</div>
+                <div class="date-number">11</div>
+                <div class="date-year">2026</div>
+                <hr class="divider-short">
+                <div class="date-day">RABU</div>
+                <div class="date-time">Pukul 08.00 WIB - Selesai</div>
+            </div>
+
+            <div id="countdown">
+                <div class="box"><span id="days">00</span><small>Hari</small></div>
+                <div class="box"><span id="hours">00</span><small>Jam</small></div>
+                <div class="box"><span id="minutes">00</span><small>Menit</small></div>
+                <div class="box"><span id="seconds">00</span><small>Detik</small></div>
+            </div>
+
+            <div class="location-box">
+                <h3>Lokasi Acara:</h3>
+                <p>
+                    <strong>Kediaman Mempelai Pria</strong><br>
+                    Dusun Penjalinan, Desa Sumbercanting<br>
+                    Kec. Wringin, Kab. Bondowoso<br>
+                    Jawa Timur, Kode Pos 68252
+                </p>
+                
+                <a href="https://www.google.com/maps/dir/?api=1&destination=Dusun+Penjalinan,+Sumbercanting,+Wringin,+Bondowoso" 
+                   target="_blank" class="btn-gold">
+                   <i class="fas fa-route"></i> Petunjuk Arah (Google Maps)
+                </a>
+            </div>
+        </section>
+
+        <section class="section container">
+            <h2 class="title-font gold-text">Our Gallery</h2>
+            <div class="gallery-grid">
+                <img src="assets/img/galeri1.jpg" alt="Foto 1" onerror="this.src='https://placehold.co/300'">
+                <img src="assets/img/galeri2.jpg" alt="Foto 2" onerror="this.src='https://placehold.co/300'">
+                <img src="assets/img/galeri3.jpg" alt="Foto 3" onerror="this.src='https://placehold.co/300'">
+                <img src="assets/img/galeri4.jpg" alt="Foto 4" onerror="this.src='https://placehold.co/300'">
+            </div>
+        </section>
+
+        <section class="section container">
+            <h2 class="title-font gold-text">Wedding Gift</h2>
+            <p>Doa restu Anda merupakan karunia yang sangat berarti bagi kami.</p>
+            <div class="gift-card">
+                <div class="bank-logo" style="color: #006664;">BNI</div>
+                <p class="rek-num">1418527232</p>
+                <p>a.n Muhammad Babun Waseptian</p>
+                <button onclick="copyRek()" class="btn-outline">Salin No. Rek</button>
+            </div>
+        </section>
+
+        <section class="section container">
+            <h2 class="title-font gold-text">Konfirmasi Kehadiran</h2>
+            <form id="rsvpForm" onsubmit="kirimWA(event)" class="rsvp-form-box">
+                <input type="text" id="formNama" placeholder="Nama Anda" class="form-input" required>
+                <select id="formKehadiran" class="form-input">
+                    <option value="Hadir">Saya akan Hadir</option>
+                    <option value="Tidak Hadir">Maaf, Tidak Bisa Hadir</option>
+                </select>
+                <textarea id="formPesan" placeholder="Ucapan & Doa..." class="form-input" rows="3"></textarea>
+                <button type="submit" class="btn-gold"><i class="fab fa-whatsapp"></i> Konfirmasi via WhatsApp</button>
+            </form>
+        </section>
+
+        <footer class="footer">
+            <p>Babun & Septiana | 2026</p>
+        </footer>
+    </main>
+
+    <div id="music-btn" onclick="toggleMusic()">
+        <i class="fas fa-compact-disc fa-spin"></i>
+    </div>
+    <audio id="lagu" loop>
+        <source src="assets/audio/lagu.mp3" type="audio/mp3">
+    </audio>
+
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,140 @@
+/* --- SETTING WARNA & FONT --- */
+:root {
+    --gold: #C5A059;
+    --gold-dark: #9A7B3F;
+    --bg-color: #FDFBF7;
+    --text-color: #444;
+}
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; }
+
+body {
+    font-family: 'Lato', sans-serif;
+    color: var(--text-color);
+    background-color: var(--bg-color);
+    /* Menggunakan background bunga dari folder assets */
+    background-image: linear-gradient(rgba(255,255,255,0.88), rgba(255,255,255,0.88)), url('assets/img/bg.jpg');
+    background-attachment: fixed;
+    background-size: cover;
+    background-position: center;
+    overflow-x: hidden;
+}
+
+.title-font { font-family: 'Playfair Display', serif; font-style: italic; }
+.arabic { font-size: 1.8rem; margin-bottom: 20px; color: var(--gold-dark); }
+.gold-text { color: var(--gold-dark); }
+
+/* --- COVER --- */
+#cover {
+    position: fixed; top: 0; left: 0; width: 100%; height: 100vh;
+    background: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.6)), url('assets/img/bg.jpg');
+    background-size: cover; background-position: center;
+    z-index: 9999;
+    display: flex; align-items: center; justify-content: center; text-align: center;
+    transition: transform 1s ease-in-out;
+}
+
+.cover-content {
+    background: rgba(255, 255, 255, 0.95);
+    padding: 40px 30px;
+    border-radius: 15px;
+    border-top: 5px solid var(--gold);
+    border-bottom: 5px solid var(--gold);
+    max-width: 90%; width: 400px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+}
+
+/* INPUT NAMA & TOMBOL BUKA */
+.guest-name-display { font-size: 1.8rem; color: var(--gold-dark); margin: 15px 0; font-weight: bold; min-height: 40px; }
+#input-name-wrapper { margin-top: 10px; }
+#guest-input { padding: 10px; border-radius: 5px; border: 1px solid #ccc; width: 70%; }
+.btn-input { background: #333; color: white; border: none; padding: 10px 15px; border-radius: 5px; cursor: pointer; margin-left: 5px; }
+
+/* Tombol Buka Undangan (Animasi Muncul) */
+.btn-open {
+    margin-top: 20px; padding: 12px 35px; background: var(--gold); color: white;
+    border: none; border-radius: 50px; cursor: pointer; font-size: 1rem;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1); width: 100%;
+    transition: 0.3s; animation: fadeIn 1s;
+}
+.btn-open:hover { transform: scale(1.05); background: var(--gold-dark); }
+
+/* --- STYLE SECTION --- */
+.container { max-width: 800px; margin: 0 auto; padding: 50px 20px; text-align: center; }
+.section {
+    background: rgba(255, 255, 255, 0.8);
+    backdrop-filter: blur(5px);
+    margin: 30px auto; padding: 40px 20px;
+    border-radius: 15px; box-shadow: 0 5px 20px rgba(0,0,0,0.05);
+    border: 1px solid white;
+}
+
+/* --- COUPLE --- */
+.couple-grid { display: flex; justify-content: center; align-items: center; gap: 30px; flex-wrap: wrap; }
+.couple-card { flex: 1; min-width: 250px; }
+.img-frame {
+    width: 180px; height: 180px; margin: 0 auto 15px;
+    border-radius: 50%; padding: 5px;
+    background: white; border: 1px solid var(--gold);
+}
+.img-frame img { width: 100%; height: 100%; border-radius: 50%; object-fit: cover; }
+.dan-symbol { font-family: 'Great Vibes', cursive; font-size: 3rem; color: var(--gold); }
+
+/* --- AYAT SUCI --- */
+.verse-box { padding: 10px; }
+.arabic-verse {
+    font-family: 'Amiri', serif; font-size: 1.6rem; line-height: 2;
+    color: var(--gold-dark); margin-bottom: 15px; font-weight: bold;
+}
+.translation { font-style: italic; font-size: 0.9rem; color: #555; margin-bottom: 10px; }
+.surah-name { font-weight: bold; color: var(--gold); }
+
+/* --- SAVE THE DATE (KALENDER) --- */
+.save-date-box {
+    border: 1px solid var(--gold); padding: 20px; margin: 20px auto; max-width: 300px;
+    background: #fff; border-radius: 10px; box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+}
+.date-header { background: var(--gold); color: white; padding: 5px; font-weight: bold; letter-spacing: 2px; border-radius: 5px 5px 0 0; margin: -20px -20px 20px -20px; }
+.date-number { font-size: 4rem; font-weight: bold; line-height: 1; color: #333; }
+.date-year { font-size: 1.2rem; letter-spacing: 5px; color: #777; margin-bottom: 10px; }
+.divider-short { width: 50px; margin: 10px auto; border-top: 2px solid var(--gold); }
+.date-day { font-size: 1.5rem; font-weight: bold; color: var(--gold-dark); margin-top: 10px; }
+.date-time { font-size: 0.9rem; color: #555; }
+
+/* COUNTDOWN */
+#countdown { display: flex; justify-content: center; gap: 10px; margin: 20px 0; }
+.box { background: white; padding: 5px 10px; border: 1px solid var(--gold); border-radius: 5px; min-width: 60px; }
+.box span { font-weight: bold; display: block; font-size: 1.2rem; }
+
+/* --- GALERI GRID --- */
+.gallery-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: 10px; margin-top: 20px; }
+.gallery-grid img {
+    width: 100%; height: 200px; object-fit: cover; border-radius: 8px;
+    border: 1px solid #ddd; transition: transform 0.3s ease;
+}
+.gallery-grid img:hover { transform: scale(1.05); z-index: 2; }
+
+/* --- GIFT & RSVP --- */
+.gift-card { background: white; padding: 25px; border: 1px dashed var(--gold); border-radius: 10px; display: inline-block; width: 100%; max-width: 350px; }
+.bank-logo { font-weight: bold; font-size: 1.5rem; margin-bottom: 10px; color: #003d79; }
+.rek-num { font-size: 1.3rem; font-weight: bold; margin-bottom: 5px; }
+.btn-outline { background: transparent; border: 1px solid var(--gold); color: var(--gold); padding: 5px 15px; border-radius: 20px; cursor: pointer; }
+.rsvp-form-box { max-width: 400px; margin: 0 auto; }
+.form-input { width: 100%; padding: 12px; margin-bottom: 10px; border: 1px solid #ccc; border-radius: 5px; }
+
+/* BUTTONS */
+.btn-gold { display: inline-block; background: var(--gold); color: white; padding: 12px 25px; border: none; border-radius: 5px; cursor: pointer; text-decoration: none; margin-top: 15px; transition: 0.3s; width: 100%; }
+.btn-gold:hover { background: var(--gold-dark); }
+
+/* FOOTER & MUSIC */
+.footer { padding: 30px; text-align: center; background: #222; color: #fff; margin-top: 50px; }
+#music-btn {
+    position: fixed; bottom: 20px; right: 20px; width: 50px; height: 50px;
+    background: white; border-radius: 50%; box-shadow: 0 2px 10px rgba(0,0,0,0.2);
+    display: flex; justify-content: center; align-items: center; cursor: pointer;
+    z-index: 1000; border: 2px solid var(--gold); color: var(--gold);
+}
+
+@keyframes fadeIn { from { opacity: 0; transform: translateY(10px); } to { opacity: 1; transform: translateY(0); } }
+@media (max-width: 768px) { h1 { font-size: 2.5rem; } .img-frame { width: 150px; height: 150px; } }
